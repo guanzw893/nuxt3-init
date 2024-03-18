@@ -13,7 +13,6 @@ module.exports = {
     }
   ],
   rules: {
-    'unit-allowed-list': ['em', 'rem', 'deg', 'px'],
     'order/properties-order': [
       'position',
       'top',
