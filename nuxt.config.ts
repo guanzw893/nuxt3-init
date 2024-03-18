@@ -7,11 +7,12 @@ export default defineNuxtConfig({
     '@pinia-plugin-persistedstate/nuxt',
     './modules/auto-import-eslint'
   ],
+  css: ['~/assets/css/main.css'],
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "~/assets/css/_colors.scss" as *;'
+          additionalData: '@import "~/assets/css/_colors.scss";'
         }
       }
     }
