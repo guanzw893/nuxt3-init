@@ -7,7 +7,8 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:vue/vue3-essential'
+    'plugin:vue/vue3-essential',
+    './.nuxt/.eslintrc.cjs'
   ],
   overrides: [
     {
@@ -59,6 +60,7 @@ module.exports = {
     'vue/valid-template-root': 'off',
     'vue/no-use-v-if-with-v-for': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
-    '@typescript-eslint/consistent-type-imports': 'error'
+    '@typescript-eslint/consistent-type-imports': 'error',
+    '@typescript-eslint/no-explicit-any': 'off'
   }
 }
