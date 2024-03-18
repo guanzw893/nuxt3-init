@@ -1,7 +1,7 @@
 import type { NitroFetchRequest } from 'nitropack'
 
 import type { UseFetchOptions } from '#app'
-import { requestConfig } from '~/config'
+import { requestConfig } from '~/app/request.options'
 
 type FetchRequest =
   | Ref<NitroFetchRequest>

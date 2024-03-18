@@ -2,9 +2,6 @@ import type { FetchOptions } from 'ofetch'
 
 const baseURL = import.meta.env.VITE_BASE_URL_API
 
-/**
- * @name: 请求配置类型
- */
 interface RequestConfig<R>
   extends Pick<
     FetchOptions<R extends 'json' ? 'json' : never>,
@@ -13,10 +10,6 @@ interface RequestConfig<R>
   baseURL: string
 }
 
-/**
- * @name: 请求配置
- * @return {RequestConfig<'json'>}
- */
 export const requestConfig: RequestConfig<'json'> = {
   /**
    * 请求基准路径
