@@ -8,13 +8,6 @@ type FetchRequest =
   | NitroFetchRequest
   | (() => NitroFetchRequest)
 
-export interface ResOptions<T> {
-  data?: T
-  code?: number
-  message?: string
-  success?: boolean
-}
-
 export const useRequest = <T>(
   url: FetchRequest,
   useFetchOptions?: UseFetchOptions<T>

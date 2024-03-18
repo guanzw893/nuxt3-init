@@ -1,25 +1,22 @@
 enum Api {
-  login = '/user/login',
-  logout = '/user/logout',
-  getUserInfo = '/user/getUserInfo'
+  user = '/user',
+  login = '/user/login'
 }
 
 const login = (params: Record<string, unknown>) => {
   return useHttp.post<any>(Api.login, params)
 }
 
-const logout = () => {
-  return useHttp.post<void>(Api.logout)
-}
-
-const getUserInfo = (id: string) => {
-  return useHttp.get<{ username: string; password: string }>(
-    Api.getUserInfo + '/' + id
-  )
+const getUserInfo = (id: number) => {
+  return useHttp.get<{
+    username: string
+    id: number
+    nickname: string
+    avatar: string
+  }>(Api.user + '/' + id)
 }
 
 export default {
   login,
-  logout,
   getUserInfo
 }
