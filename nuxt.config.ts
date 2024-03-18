@@ -1,7 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/stylelint-module'],
+  modules: [
+    '@nuxtjs/stylelint-module',
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt'
+  ],
   vite: {
     css: {
       preprocessorOptions: {
@@ -14,5 +18,11 @@ export default defineNuxtConfig({
   stylelint: {
     lintOnStart: false,
     chokidar: true
+  },
+  pinia: {
+    storesDirs: ['./stores/**']
+  },
+  piniaPersistedstate: {
+    storage: 'localStorage'
   }
 })
