@@ -2,10 +2,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
+    '@nuxtjs/eslint-module',
     '@nuxtjs/stylelint-module',
     '@pinia/nuxt',
-    '@pinia-plugin-persistedstate/nuxt',
-    './modules/auto-import-eslint'
+    '@pinia-plugin-persistedstate/nuxt'
   ],
   css: ['~/assets/css/main.css'],
   vite: {
